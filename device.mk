@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+#               2022 The Evolution X Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -18,10 +19,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_ODM)/etc/sound_trigger_mixer_paths.xml \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_ODM)/etc/sound_trigger_platform_info.xml
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -32,6 +29,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
+    ApertureResTarget \
+    EvolutionSettingsResTarget \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget
